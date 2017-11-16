@@ -1,0 +1,652 @@
+#vizKCsuspensions_storyContainer section h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+    font-family: bebas-neue,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+}
+#vizKCsuspensions_storyContainer #page-hero p.tag {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+   font-family: bebas-neue,sans-serif;
+}
+#vizKCsuspensions_storyContainer #page-hero .author {
+    font-size: .8em;
+}
+#vizKCsuspensions_storyContainer p,
+#vizKCsuspensions_storyContainer,
+#vizKCsuspensions_storyContainer h1,
+#vizKCsuspensions_storyContainer h2,
+#vizKCsuspensions_storyContainer h3,
+#vizKCsuspensions_storyContainer h4,
+#vizKCsuspensions_storyContainer h5,
+#vizKCsuspensions_storyContainer h6 {
+    font-family: open-sans,Arial,sans-serif;
+}
+#vizKCsuspensions_storyContainer h4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 2em;
+}
+#vizKCsuspensions_storyContainer hr {
+    box-sizing: content-box;
+    max-width: 75rem;
+    height: 0;
+    margin: 1.25rem auto;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #cacaca;
+    border-left: 0;
+}
+#vizKCsuspensions_storyContainer .row {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+#vizKCsuspensions_storyContainer span{
+   font-family: open-sans,Arial,sans-serif;
+  font-size: 11pt;
+  line-height: 1.3800000000000001;
+}
+#vizKCsuspensions_storyContainer section {
+    padding: 5rem 1.875rem;
+}
+#vizKCsuspensions_storyContainer .medium-centered {
+    margin-right: auto;
+    margin-left: auto;
+  float: none;
+    clear: both;
+}
+#vizKCsuspensions_storyContainer section{
+  display: block;
+}
+#vizKCsuspensions_storyContainer article,
+#vizKCsuspensions_storyContainer aside,
+#vizKCsuspensions_storyContainer details,
+#vizKCsuspensions_storyContainer figcaption,
+#vizKCsuspensions_storyContainer figure,
+#vizKCsuspensions_storyContainer footer,
+#vizKCsuspensions_storyContainer header, 
+#vizKCsuspensions_storyContainer main, 
+#vizKCsuspensions_storyContainer menu,
+#vizKCsuspensions_storyContainer nav,
+#vizKCsuspensions_storyContainer section {
+    display: block;
+}
+
+#vizKCsuspensions_storyContainer #page-hero {
+    padding: 3rem 0 0;
+     margin: 0 auto;
+    max-width: 950px;
+}
+
+/**/
+#vizKCsuspensions_storyContainer .plot{
+fill: #fff;
+}
+#vizKCsuspensions_storyContainer .axis path,
+#vizKCsuspensions_storyContainer .axis line {
+  fill: none;
+	stroke: #AFBABF;
+	shape-rendering: crispEdges;
+	}
+#vizKCsuspensions_storyContainer .axis text {
+	font-family:  SourceSansPro-Bold;
+	font-size: 14px;
+	fill: #000;
+	}
+/*.x.axis path {
+  display: none;
+}
+.y.axis path{
+  display: none;
+  }
+
+/*.line {
+  fill: none;
+  stroke: #ccc;
+  stroke-linejoin: round;
+  stroke-linecap:round;
+}*/
+	
+#vizKCsuspensions_storyContainer .hed {
+	font-family: SourceSansPro-Bold;
+	font-size: 24pt;
+	margin-bottom:5px; 
+	margin-top:0px;
+	}
+	
+#vizKCsuspensions_storyContainer .dek {
+	font-family: SourceSansPro-Light;
+	font-size: 12pt;
+	margin-bottom:0px; 
+	margin-top:0px;
+	}	
+#vizKCsuspensions_storyContainer .menuchoice {
+	font-family: SourceSansPro-Light;
+	font-size: 10pt;
+	margin-bottom:0px;
+	fill: #231F20; 
+	}
+#vizKCsuspensions_storyContainer .legend {
+	font-family: SourceSansPro-Light;
+	font-size: 10pt;
+	margin-bottom:0px;
+	fill: none; 
+	}	
+#vizKCsuspensions_storyContainer .legend-off {
+	font-family: SourceSansPro-Light;
+	font-size: 10pt;
+	margin-bottom:0px;
+	fill: #231F20; 
+	}
+#vizKCsuspensions_storyContainer .legend-select {
+	font-family: SourceSansPro-Bold;
+	font-size: 10pt;
+	margin-bottom:0px;
+	fill: none; 
+	}
+#vizKCsuspensions_storyContainer .tip1 {
+	font-family: SourceSansPro-Bold;
+	font-size: 6pt;
+	text-align: center; 
+	margin-bottom:-12px; 
+	margin-top:0px;
+	}
+	
+#vizKCsuspensions_storyContainer .tip2 {
+	font-family: SourceSansPro-ExtraLight;
+	font-size: 10pt;
+	text-align: center; 
+	margin-bottom:-12px; 
+	}	
+#vizKCsuspensions_storyContainer .tip3 {
+	font-family: SourceSansPro-ExtraLight;
+	font-size: 9pt;
+	text-align: center; 
+	margin-bottom:0px; 
+	}		
+
+#vizKCsuspensions_storyContainer path.selected {
+  fill: #ff7409;
+}
+
+
+/*.form-control {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    height: 45px;
+    font-size: 30px;
+}*/
+
+#vizKCsuspensions_storyContainer #susLineChart{
+  margin-top: 70px;
+}
+#vizKCsuspensions_storyContainer #susLineChart .axis--y path {
+  display: none;
+}
+#vizKCsuspensions_storyContainer #susLineChart p{
+  font-family: open-sans,Arial,sans-serif;
+  max-width: 900px;
+  font-size: 10px;
+  margin: 0 auto;
+  padding-left: 12px;
+}
+#vizKCsuspensions_storyContainer #susLineChart .cities {
+  fill: none;
+  stroke: #ccc;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 1.5px;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .city--hover {
+  stroke: #000 !important;
+  opacity: 1 !important;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .focus text {
+     font-family: open-sans,Arial,sans-serif;
+  fill: #000;
+  font-weight: 400;
+  font-size: 16px;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 rgb(255, 255, 255),
+    0 -1px 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255),
+    0 2px 0 rgb(255, 255, 255), 2px 0 0 rgb(255, 255, 255),
+    0 -2px 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255);
+}
+#vizKCsuspensions_storyContainer #susLineChart .focus2 text {
+  font-weight: 800;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 rgb(255, 255, 255),
+    0 -1px 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255),
+    0 2px 0 rgb(255, 255, 255), 2px 0 0 rgb(255, 255, 255),
+    0 -2px 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255);
+}
+#vizKCsuspensions_storyContainer #susLineChart .voronoi path {
+  fill: none;
+  pointer-events: all;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .voronoi--show path {
+  stroke: red;
+  stroke-opacity: 0.2;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart #form {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart #Kansas_City_Public_Schools,
+#vizKCsuspensions_storyContainer #susLineChart #Hickman_Mills,
+#vizKCsuspensions_storyContainer #susLineChart #Independence,
+#vizKCsuspensions_storyContainer #susLineChart #Kansas_City_Kansas,
+#vizKCsuspensions_storyContainer #susLineChart #Center {
+  stroke: #d77e7e;
+  stroke-width: 2.5px;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart #Average {
+  stroke: #000;
+  stroke-width: 2.5px;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .labels {
+  font-family: bebas-neue, sans-serif;
+  fill: #d77e7e;
+  font-weight: 400;
+  font-size: 16px;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 rgb(250, 250, 250),
+    0 -1px 0 rgb(250, 250, 250), -1px 0 0 rgb(250, 250, 250),
+    0 2px 0 rgb(250, 250, 250), 2px 0 0 rgb(250, 250, 250),
+    0 -2px 0 rgb(250, 250, 250), -2px 0 0 rgb(250, 250, 250);
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .avglabels {
+  font-family: bebas-neue, sans-serif;
+  fill: #1e1e1e;
+  font-weight: 400;
+  font-size: 16px;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 rgb(250, 250, 250),
+    0 -1px 0 rgb(250, 250, 250), -1px 0 0 rgb(250, 250, 250),
+    0 2px 0 rgb(250, 250, 250), 2px 0 0 rgb(250, 250, 250),
+    0 -2px 0 rgb(250, 250, 250), -2px 0 0 rgb(250, 250, 250);
+}
+
+
+
+#vizKCsuspensions_storyContainer #susLineChart .vorLineChart {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .form-control {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1.25px;
+  height: 50px;
+  font-size: 25px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart input,
+#vizKCsuspensions_storyContainer #susLineChart textarea,
+#vizKCsuspensions_storyContainer #susLineChart select,
+#vizKCsuspensions_storyContainer #susLineChart a {
+  outline: none;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .axis text{
+  font-family: open-sans,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#vizKCsuspensions_storyContainer #susLineChart .lineGraph_desc {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
+
+#vizKCsuspensions_storyContainer #suspensionDif{
+  margin-bottom: 2em;
+}
+#vizKCsuspensions_storyContainer #suspensionDif p{
+  font-size: 10px;
+}
+#vizKCsuspensions_storyContainer #susBarChart #Kansas_City_Public_Schools,
+#vizKCsuspensions_storyContainer #susBarChart #Hickman_Mills,
+#vizKCsuspensions_storyContainer #susBarChart #Kansas_City_Kansas,
+#vizKCsuspensions_storyContainer #susBarChart #Independence,#susBarChart #Center{
+  fill: rgba(103,150,176,1);
+}
+#vizKCsuspensions_storyContainer #susBarChart .bars{
+  fill: rgba(230,230,230,1);
+  shape-rendering: crispEdges;
+}
+
+#vizKCsuspensions_storyContainer #susBarChart{
+  font-family: open-sans,Arial,sans-serif;
+}
+#vizKCsuspensions_storyContainer #susBarChart .axis text {
+  font: 10px;
+}
+#vizKCsuspensions_storyContainer #susBarChart .axis path,
+#vizKCsuspensions_storyContainer #susBarChart .axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+#vizKCsuspensions_storyContainer #susBarChart .axis{
+  stroke: #000;
+}
+#vizKCsuspensions_storyContainer #susBarChart .overlay {
+  fill: none;
+  pointer-events: all;
+}
+#vizKCsuspensions_storyContainer #susBarChart .focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+#vizKCsuspensions_storyContainer #susBarChart .focus text{
+  font-style:;
+  font-size: 0.75em;
+  width: 9px;
+  text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff, 2px 2px 2px #fff, 2px -2px 2px #fff, -2px 2px 2px #fff, -2px -2px 2px #fff;
+}
+#vizKCsuspensions_storyContainer #susBarChart .focus2 text{
+  fill: #000;
+  font-weight:bold;
+  width: 8px;
+  text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff, 2px 2px 2px #fff, 2px -2px 2px #fff, -2px 2px 2px #fff, -2px -2px 2px #fff;
+}
+#vizKCsuspensions_storyContainer #susBarChart .focus3{
+  fill: #000;
+  width: 6px;
+}
+#vizKCsuspensions_storyContainer #susBarChart .link {
+  fill: none;
+  stroke: black;
+  opacity: 1;
+  stroke-width: 1.5px;
+  shape-rendering:crispEdges;
+}
+#vizKCsuspensions_storyContainer #susBarChart .labels{
+   font-family: bebas-neue,sans-serif;
+  fill: rgba(103,150,176,1);
+  font-weight: 400;
+  font-size: 1em;
+}
+
+/*
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+*/
+
+#vizKCsuspensions_storyContainer #sus_Gap .axis--y path {
+  display: none;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .susGap_cities {
+  fill: none;
+  stroke: #eee;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 1.75px;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .Raytown,
+#vizKCsuspensions_storyContainer #sus_Gap .Excelsior_Springs,
+#vizKCsuspensions_storyContainer #sus_Gap .Hickman_Mills,
+#vizKCsuspensions_storyContainer #sus_Gap .Oak_Grove,
+#vizKCsuspensions_storyContainer #sus_Gap .Liberty{
+  stroke: #7fbf8e;
+  stroke-width: 2.5px;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .susGap_city--hover {
+  stroke: #000;
+  opacity: 1 !important;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .susGap_focus text {
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #ffffff,
+    1px 0 0 #ffffff,
+    0 -1px 0 #ffffff,
+    -1px 0 0 #ffffff,
+    0 2px 0 #ffffff,
+    2px 0 0 #ffffff,
+    0 -2px 0 #ffffff,
+    -2px 0 0 #ffffff,
+    0 3px 0 #ffffff,
+    3px 0 0 #ffffff,
+    0 -3px 0 #ffffff,
+    -3px 0 0 #ffffff;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .susGap_voronoi path {
+  fill: none;
+  pointer-events: all;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .susGap_voronoi--show path {
+  stroke: red;
+  stroke-opacity: 0.2;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  font-family: open-sans,Arial,sans-serif;
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .axis text {
+    font-family: open-sans,Arial,sans-serif;
+}
+#vizKCsuspensions_storyContainer #sus_Gap .labels{
+  font-weight: 400;
+  font-size: 0.9em;
+  fill: #7fbf8e;  
+}
+
+#vizKCsuspensions_storyContainer #sus_Gap .form-control {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  height: 30px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1.25px;
+  height: 40px;
+  font-size: 20px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/*
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+*/
+
+#vizKCsuspensions_storyContainer #suspensionType{
+  margin-bottom: 4em;
+}
+#vizKCsuspensions_storyContainer #suspensionType #one .rectangle {
+	fill: #d87e7f;
+}
+#vizKCsuspensions_storyContainer #suspensionType #two .rectangle {
+	fill: rgba(103,150,176,1);
+}
+#vizKCsuspensions_storyContainer #suspensionType #three .rectangle {
+	fill: #7fbf8e;
+}
+#vizKCsuspensions_storyContainer #suspensionType #four .rectangle {
+	fill: #E9E485;
+}
+#vizKCsuspensions_storyContainer #suspensionType .rectangle:hover {
+	fill: orange;
+}
+#vizKCsuspensions_storyContainer #suspensionType .axis {
+  font: 10px sans-serif;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType .xaxis path,
+#vizKCsuspensions_storyContainer #suspensionType .xaxis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+  shape-rendering: crispEdges;
+}
+#vizKCsuspensions_storyContainer #suspensionType .yaxis line,
+#vizKCsuspensions_storyContainer #suspensionType .yaxis path{
+  stroke: none;
+  fill: none;
+  shape-rendering: crispEdges;
+}
+#vizKCsuspensions_storyContainer #suspensionType .tick line{
+  stroke: none;
+  fill:none;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType h4{
+  text-align: center;
+  margin-top: 2em;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType p{
+  text-align: center;
+  margin-top: 0px;
+  font-size:12px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType #one svg,
+#vizKCsuspensions_storyContainer #suspensionType #two svg,
+#vizKCsuspensions_storyContainer #suspensionType #three svg,
+#vizKCsuspensions_storyContainer #suspensionType #four svg{
+  margin: 0 auto;
+  display: block;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType .focus text{
+  font-size: 45px;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType .form-control {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 34px;
+  padding-bottom: 0px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1.25px;
+  height: 45px;
+  font-size: 25px;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom:20px;
+}
+
+#vizKCsuspensions_storyContainer #suspensionType .note p{
+  text-align: left;
+  margin-top: 2em;
+  color: #000;
+  font-size: 10px;
+}
+/* FAQ COLLAPSE/EXPAND STYLES */
+* {
+  box-sizing: border-box;
+}
+#vizKCsuspensions_storyContainer #districtClass_drop .faqanswer {
+	display: none;
+	width: 100%;
+	background: #e5e5e5;
+	padding: 12px 20px 0 30px;	
+}
+#vizKCsuspensions_storyContainer #districtClass_drop .faqanswer2 {
+	display: none;
+	width: 100%;
+	background: #e5e5e5;
+	padding: 12px 20px 0 30px;	
+}
+
+#vizKCsuspensions_storyContainer #districtClass_drop .faqanswer p,
+#vizKCsuspensions_storyContainer #districtClass_drop .faqanswer2 p{
+	font-size: 13px;
+	line-height: 17px;	
+}
+
+#vizKCsuspensions_storyContainer #districtClass_drop .togglefaq,
+#vizKCsuspensions_storyContainer #districtClass_drop .togglefaq2 {
+	text-decoration: none;
+	color: #333;
+	font-size: 11px;
+	padding: 10px 30px;
+	line-height: 20px;
+	display: block;
+	border: 1px solid #d0d0d0;
+	width: 100%;
+	margin-bottom: -1px;
+}
+#vizKCsuspensions_storyContainer #districtClass_drop .icon-plus {
+	color: #5ec4cd;
+	margin-right: 20px;
+	font-size: 20px;
+	float:left;
+}
+
+#vizKCsuspensions_storyContainer #districtClass_drop .icon-minus {
+	color: #5ec4cd;
+	margin-right: 20px;
+	font-size: 20px;
+	float:left;
+}
+#vizKCsuspensions_storyContainer #districtClass_drop p {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+#vizKCsuspensions_storyContainer #districtClass_drop .red{
+  color: #BD6F6F;
+  font-weight: bold;
+}

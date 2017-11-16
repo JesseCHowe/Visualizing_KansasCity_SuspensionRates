@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Take_Note_Shell</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="vizKCsuspensions_storyContainer">
+<head>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://use.typekit.net/gyh4ngr.js"></script>
+  <script>
+    try {
+      Typekit.load({ async: true });
+    } catch (e) {}
+  </script>
+  <script type="text/javascript" src="https://gist.githubusercontent.com/JesseCHowe/2047134041fb45855a8ffe3f87852cad/raw/f04c3608668bcc29f7a94444dba5e5a1d02239a2/jquery.tipsy.js">
+
+  </script>
+</head>
+
+<section id="page-hero" class="default">
+  <div class="default">
+    <div class="latest-story row">
+      <div class="small-12 small-centered columns">
+        <p class="tag">Discipline</p>
+        <h1>Visualizing Kansas City Suspensions</h1>
+        <h2 class="subheader"></h2>
+        <span class="author">by Jesse Howe &nbsp | &nbsp Nov 7, 2017</span>
+        <div class="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="susLineChart">
+  <h4>Out of School Suspensions per 100 students from 2008 to 2015</h4>
+  <p id="suspensionMenu1" class=""><select class="form-control" id="districtSelection1">
+    <option value="all">All Districts</option>
+        <option value="Raytown">Blue Springs</option>
+        <option value="Gordon">Blue Valley</option>
+        <option value="Otis">Bonner Springs</option>
+        <option value="Butler">Center</option>
+        <option value="Jackson">Clinton</option>
+        <option value="Hamelin">De Soto</option>
+        <option value="Oliver">Excelsior Springs</option>
+        <option value="Beltran">Fort Osage</option>
+        <option value="Davis">Gardner Edgerton</option>
+        <option value="Paquette">Grain Valley</option>
+        <option value="Tartabull">Grandview</option>
+        <option value="Palmer">Hickman Mills</option>
+        <option value="Kirkpatrick">Independence</option>
+        <option value="Hosmer">Kansas City Public Schools</option>
+        <option value="White">Kansas City Kansas</option>
+        <option value="Gaetti">Kearney</option>
+        <option value="Brett">Lawson</option>
+        <option value="McRae">Lee's Summit</option>
+        <option value="King">Liberty</option>
+        <option value="Dye">Lone Jack</option>
+        <option value="Mayberry">North Kansas City</option>
+        <option value="Morales">North Platte</option>
+        <option value="Olivo">Oak Grove</option>
+        <option value="Moustakas">Olathe</option>
+        <option value="Sweeney">Park Hill</option>
+        <option value="Ibanez">Platte</option>
+        <option value="Perez">Raytown</option>
+        <option value="Balboni">Shawnee Mission</option>
+        <option value="Aikens">Smithville</option>
+        <option value="Balboni">Spring Hill</option>
+        <option value="Aikens">Turner</option>
+        <option value="Balboni">West Platte</option>
+    </select>
+  </p>
+
+  <div class="vorLineChart">
+    <svg viewBox="0 0 960 578" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%;  max-width:950px; overflow: hidden;"><svg width="960" height="578"></svg></svg>
+  </div>
+  <p>Note: Average based off of all thirty two districts in chart (Piper school district not shown above)</p>
+</div>
+
+<section id="story-content" class="row">
+
+  <div class="columns small-12 medium-8 medium-centered">
+    <div class="row share">
+      <div class="columns small-12">
+      </div>
+    </div>
+    <div class="content-body">
+
+
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+The Civil Rights Data Collection (CRDC) 2011 analysis of Elementary Suspension Gaps put Missouri in the spotlight two years ago, revealing that the state had the highest suspension rate of black elementary students in the nation at 14 percent and an elementary suspension gap of 12.5 black students suspended for every white student.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+The CRDC data also showed that Missouri’s high suspension rates were weighted heavily by St. Louis and Kansas City, as both cities enroll the majority of Black Students in the state. The Kansas City metro enrolls 22 percent of black students in Missouri..
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Flatland has put together four visualizations on suspensions for the Kansas City metro, using data collected by the CRDC and the Missouri and Kansas Departments of Education, tracking suspension rates, change in suspensions, and the reasons why students are suspended, as well as the current public data by the CRDC on racial disparities K-12.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+
+      <div id="suspensionDif">
+        <h4>Change in out of school suspension rates between 2008-2011 and 2012-2015</h4>
+        <div id="susBarChart">
+          <svg viewBox="0 0 800 425" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%; overflow: hidden; max-width:950px;"></svg>
+        </div>
+        <p>Note: chart shows difference between four year averages: 2008-2011 (year of CRDC report data and prior) and 2012-2015 (post CRDC report data)</p>
+      </div>
+
+      <p>
+        <strong>Suspensions</strong>
+      </p>
+
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+2011 was an especially bad year for Kansas City Public Schools (KCPS), the district’s suspension rate doubled from 4.1 percent the year before to 8.3 percent, the highest rate the district has on record.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Steve Green, KCPT superintendent, attributed the high rates to large amounts of school closures (as reported the Kansas City Star in 2015) and that Kansas City “would show a decline with the next federal data collection”. According to, DESE data and 2013 CRDC data the district has kept lower suspension rates since 2011, but on average the district is still averaging slightly higher than years before 2011 by 0.6 percent.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+When looking at suspension rate data, it becomes clear that the same districts that attributed to Missouri’s high elementary suspension rate in 2011, are districts that have large fluctuations in their suspension rates from year to year. Kansas City saw its lowest and highest suspension rates back to back. The trend also show more urban school districts see higher fluctuations than suburban and rural districts, except for the largest outlier on the graph, Hickman Mills.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+In 2015 the CRDC reported that Hickman Mills, had an even higher black suspension rate than KCPS, at 23.6 percent to KCPS’s 19.8 percent. 2011 wasn’t even Hickman Mills largest suspending year, beating KCPS’s 2011 high in 2014 at 8.6 percent.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Hickman Mills is well aware of their suspension rate, along with its provisional accreditation. New superintendent, Yolanda Cargile has already set out initiatives for replacing suspension rates with a restorative justice program, an approach that is also being applied to individual schools in the St. Louis area.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+
+      <div id="sus_Gap">
+        <h4>Change black white suspension gap 2011 to 2013</h4>
+        <p id="suspensionMenu2" class=""><select class="form-control" id="districtSelection2">
+    <option value="all">All Districts</option>
+        <option value="Blue">Blue Springs</option>
+        <option value="Gordon">Blue Valley</option>
+        <option value="Otis">Bonner Springs</option>
+        <option value="Butler">Center</option>
+        <option value="Jackson">Clinton</option>
+        <option value="Hamelin">De Soto</option>
+        <option value="Oliver">Excelsior Springs</option>
+        <option value="Beltran">Fort Osage</option>
+        <option value="Davis">Gardner Edgerton</option>
+        <option value="Paquette">Grain Valley</option>
+        <option value="Tartabull">Grandview</option>
+        <option value="Palmer">Hickman Mills</option>
+        <option value="Kirkpatrick">Independence</option>
+        <option value="Hosmer">Kansas City Public Schools</option>
+        <option value="White">Kansas City Kansas</option>
+        <option value="Gaetti">Kearney</option>
+        <option value="Brett">Lawson</option>
+        <option value="McRae">Lee's Summit</option>
+        <option value="King">Liberty</option>
+        <option value="Dye">Lone Jack</option>
+        <option value="Mayberry">North Kansas City</option>
+        <option value="Morales">North Platte</option>
+        <option value="Olivo">Oak Grove</option>
+        <option value="Moustakas">Olathe</option>
+        <option value="Sweeney">Park Hill</option>
+        <option value="Ibanez">Platte</option>
+        <option value="Perez">Raytown</option>
+        <option value="Balboni">Shawnee Mission</option>
+        <option value="Aikens">Smithville</option>
+        <option value="Balboni">Spring Hill</option>
+        <option value="Aikens">Turner</option>
+        <option value="Balboni">West Platte</option>
+    </select>
+        </p>
+        <svg viewBox="0 0 600 500" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%; overflow: hidden; max-width:1200px;"><svg width="600" height="500"></svg></svg>
+      </div>
+
+      <p>
+        <strong>
+                Racial Disparities
+              </strong>
+      </p>
+
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Not only has an overall suspension rate been an obstacle for Kansas City metro school districts, but a disparity between those who are suspended has also plagued the district. Disproportionate amounts of black students have been suspended compared to their white peers.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Between 2011 and 2013, 15 out of the 25 districts in Kansas City metro* have decreased the suspension gap, some as much as 8.5 percent. Others such as Oak Grove, Independence, and Raytown have seen increases in their suspension gap.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+This data should be taken with a grain of salt, though it is true Raytown had a suspension rate of 21.9% in 2013, it had a suspension rate of 8% two years before. The CRDC has only collected suspension data biannually since 2009, and much like overall suspension rate from DESE, is susceptible to wild variations from year to year. Raytown has also seen the largest decrease in overall suspensions in the metro.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+
+
+      <div id="suspensionType">
+        <h4>Out of school suspensions by type</h4>
+        <div id="drop" align=center></div>
+        <div class="row">
+          <div id="one" class="small-6 columns">
+            <h4>Violence</h4>
+            <p>As defined by school board and including, but not limited to, exertion of physical force with intent to do serious bodily harm.</p>
+            <svg viewBox="0 0 960 400" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%; overflow: hidden; max-width:550px;"></svg>
+          </div>
+          <div id="two" class="small-6 columns">
+            <h4>Weapon</h4>
+            <p>Device or instrument capable of causing serious bodily injury. Does not include a knife with a blade of less than 2 1/2 inches in length.</p>
+            <svg viewBox="0 0 960 400" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%; overflow: hidden; max-width:550px;"></svg>
+          </div>
+        </div>
+        <div class="row">
+          <div id="three" class="small-6 columns">
+            <h4>Alcohol</h4>
+            <p>Use, possession, sale, or solicitation of intoxicating alcoholic beverages.</p>
+            <svg viewBox="0 0 960 400" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%; overflow: hidden; max-width:550px;"></svg>
+          </div>
+          <div id="four" class="small-6 columns">
+            <h4>Drugs</h4>
+            <p>Use, possession, sale or solicitation of drugs.<br> (includes tobacco)</p>
+            <svg viewBox="0 0 960 400" preserveAspectRatio="xMinYMin slice" width="100%" height="100%" style="width: 100%; overflow: hidden; max-width:550px;"></svg>
+          </div>
+        </div>
+        <div class="row note">
+          <p>Note: Kansas District may not equal to total as totals that are less than ten are not specified. There is also no data for the 2011 year for Kansas school districts.</p>
+        </div>
+      </div>
+
+      <p>
+        <strong>
+                Why students are suspended
+              </strong>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+The basis for suspensions is often left to individual districts, usually outlined in their student handbooks, but the common thread between all districts is that the majority of out of schools suspensions given are for nonviolent offenses.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+These out of school suspensions can last anywhere from one day to 10days. The Washington Post reported in 2015 that students lost a cumulative <a href="">18 million days of instruction for out of school suspensions in the 2011-2012 school year”.</a>
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Between 2008 and 2015, 20 percent of suspensions were for violent offenses. The rest varied from alcohol, drugs, tobacco,and bringing a weapon to school, with a large amount being categorized under “other”.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+The way violent acts are categorized, varies between districts as well as offenses that call for OSS. In both KCPS and Kansas City, Kansas offenses are categorized I through III. KCPS does not include possession of drugs or alcohol as a category III offense, while Kansas City, Kansas does, along with failure to remain seated on a bus and obscene gestures.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <svg height="40" width="600">
+  <circle cx="20" cy="20" r="6" fill="#d77e7e" />
+ <text x="40" y="25" fill="#d77e7e">Red text represents offenses that appear in both handbooks</text>
+</svg>
+      <div id="districtClass_drop">
+        <div class="row">
+          <div class="small-6 columns">
+            <a href="#" class="togglefaq"><i class="icon-plus"></i>View Kansas City Public School Class III offenses</a>
+            <div class="faqanswer">
+              <p>Academic Dishonesty</p>
+              <p>Misuse of Computer or Violation of Network Practices</p>
+              <p>Forgery</p>
+              <p class="red">Bullying (Physical, Verbal or Cyber)</p>
+              <p>Stealing</p>
+              <p class="red">Sexual Harassment</p>
+              <p class="red">Extortion</p>
+              <p class="red">Vandalism</p>
+              <p>Conspiracy to Commit a Class III Offense</p>
+              <p>Receiving Stolen Property</p>
+              <p>Failure to Meet Conditions of Suspension, Expulsion, or Other Disciplinary Consequences </p>
+              <p>Sexting and/or Possession of Sexually Explicit, Vulgar or Violent Material</p>
+            </div>
+          </div>
+          <div class="small-6 columns">
+            <a href="#" class="togglefaq2"><i class="icon-plus"></i>View Kansas City Kansas Class III Offenses</a>
+            <div class="faqanswer2">
+              <p>Alcohol Possession and Use or Dispersal</p>
+              <p class="red">Bullying</p>
+              <p>Creating any Hazard or Damage to the Bus</p>
+              <p>Drug and Drug Paraphernalia (Possession/Use/Dispersal)</p>
+              <p>Extending Hands, Head or Objects from the Bus</p>
+              <p class="red">Extortion</p>
+              <p>Failure to Remain Seated on the Bus</p>
+              <p>False Reports/Bomb or School Threats</p>
+              <p>Fighting:</p>
+              <p>Gang Related Activity</p>
+              <p>Hate-Related Conduct</p>
+              <p class="red">Harassment: Sexual: </p>
+              <p>Illicit Drug Possession/Use/Solicitation/Sale:</p>
+              <p>Inciting to Fight:</p>
+              <p>Intimidation/Threatening of Staff or Students:</p>
+              <p>Leaving School without Permission</p>
+              <p>Obscene Language or Gestures on the Bus:</p>
+              <p>Possession of Destructive Devices:</p>
+              <p>Setting Off Falsely or Misuse of Disaster Alarm or Equipment</p>
+              <p>Sexual Misconduct: </p>
+              <p>Stalking: </p>
+              <p>Tampering with Bus Operating Equipment: </p>
+              <p>Throwing Objects from or within the Bus:</p>
+              <p>Tobacco Solicitation/Sale:</p>
+              <p>Use of Fireworks or Explosives Possession, Sale, Distribution</p>
+              <p>Verbal Abuse towards the Bus Driver:</p>
+              <p class="red">Vandalism-School Property:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.2">
+          <span style="font-size:12pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+The difference in these policies can call for dramatic differences in data collection and categorization. Where Kansas City Public Schools had no more that 7 violent offenses in any given year since 2008 Kansas City, Kansas had 573 in 2012 alone.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Nationwide, as many as 95 percent of out-of-school suspensions are for nonviolent misbehavior--like being disruptive, acting disrespectfully, tardiness, profanity, and dress code violations.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Districts continue to look for ways to deescalate the suspension reputation that they have received in recent years, whether through addressing racial bias, basis for suspensions, and how schools approach discipline.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+2016 numbers are already available on Missouri department of education site, where KCPS has reached a new record low of 2.2 percent and a record low 366 incidents, where 1,200 was the average. Hickman Mills 2016 numbers are also lower than ever before at a 2.7 percent suspension rate.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Although, just like in the past, it will be a few years until these can be confirmed as a positive trend or outlier, and even longer before improvement in racial disparities can be confidently confirmed.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+
+      <hr>
+      <p>
+        <strong>
+          About the data
+        </strong>
+      </p>
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+Suspension data for Missouri was collected from the Missouri Department of Education site, Kansas school data was collected from the KAnsas state department of education. Change in racial disparities was collected from the Civil Right Data Collection. Definition of violent suspensions is according to data collection definition.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+
+      <p dir="ltr" style="margin-top:0pt; margin-bottom:10pt">
+        <span style="line-height:2.3800000000000001">
+          <span style="font-size:11pt">
+            <span style="font-family:Calibri">
+              <span>
+                <span>
+The CRDC survey biannually with a large waiting period for each data release (2013-2014 data was released in January of 2017)
+
+*Kansas City metro is defined by Take Note’s study area.
+                </span>
+        </span>
+        </span>
+        </span>
+        </span>
+      </p>
+
+    </div>
+    <div class="row-share">
+    </div>
+</section>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
